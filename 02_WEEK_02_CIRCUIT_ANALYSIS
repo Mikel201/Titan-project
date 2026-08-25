@@ -1,0 +1,20 @@
+NOTE
+
+SERIES CIRCUIT:This circuit have all component connected by a single wire with the same current flowing through every component; voltage is divided among the component.
+PARALLEL CIRCUIT:This voltage remain the same while the current is split among each components are connected across the same two nodes.
+SERIES-PARALLEL CIRCUIT: This is a combination of both the series circuit and the parallel circuit. it comtain portions of the circuit connected in series and othr portions connected im parallel.
+
+Kirchhpff's current law(KCL):The total current entering a node equals to sum of the individual current leaving the node. sum of Iin= sum of Iout
+kirchhoff's voltage law (kvl) :State that the algebraic sum of all the voltage changes around a  closed loop is zero
+Example;
+ +12v-4v-8v=0
+
+Why does adding resistor in parallel reducess total resistance?
+   ans; the reason is because adding more resistors in parallel create more paths for the flow of electric current
+
+What does KCL and KVL represent physically?
+    answer; KCL- conservation of charge i.e  what goes in must come out
+            KVL- conservation of energy i.e energy gain =energy lost
+
+Why does short circuit produce extremely high current?
+  answer; because short circuit provide the least resistance path across a voltage source. According to ohms law, reducing the resistance while voltage remain constant causes current to increase significantly
