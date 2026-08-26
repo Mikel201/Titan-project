@@ -2,9 +2,9 @@ NOTE
 
 SERIES CIRCUIT:This circuit have all component connected by a single wire with the same current flowing through every component; voltage is divided among the component.
 PARALLEL CIRCUIT:This voltage remain the same while the current is split among each components are connected across the same two nodes.
-SERIES-PARALLEL CIRCUIT: This is a combination of both the series circuit and the parallel circuit. it comtain portions of the circuit connected in series and othr portions connected im parallel.
+SERIES-PARALLEL CIRCUIT: This is a combination of both the series circuit and the parallel circuit. it contain portions of the circuit connected in series and other portions connected in parallel.
 
-Kirchhpff's current law(KCL):The total current entering a node equals to sum of the individual current leaving the node. sum of Iin= sum of Iout
+Kirchhoff's current law(KCL):The total current entering a node equals to sum of the individual current leaving the node. sum of Iin= sum of Iout
 kirchhoff's voltage law (kvl) :State that the algebraic sum of all the voltage changes around a  closed loop is zero
 Example;
  +12v-4v-8v=0
