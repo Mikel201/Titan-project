@@ -1,0 +1,167 @@
+WEEK 3
+RESISTOR:
+This is a device that limit/slow the movement of electron or to set voltage levels within a circuit. Resistors can be fix or variable depending. If a DC source is applied across a voltage, the amount of current flowing  through the resistor can be calculated using Ohm’s law V=I*R. When this happen, the resistor react by dissipating heat to the surrounding, this is known as power dissipation and can be calculated using Power law, P=I*V = R*I^2 (Ohm’s power law) where; R is in ohms, P is the power loss in watts(w), V is voltage(v) and I is the current in ampere(A).
+     Unit Prefixes
+Resistors comes in value from 1ohms to 1,000,000ohms. For example a 100,000ohms can be simplified by writing 100k ohms, here k=1000.  2,000,000 ohms can be simplified to 2M ohms. Here M=1,000,000.
+Conversely, voltage, current and power levels are usually small fractions of a unit in which case it is often easier to use unit prefixes such as milli-m(10^-3), micro(10^-6), nano-n(10^-9) or even pico-p(10^-12). Example, a current of 0.0000594A=5.94*10^-5
+Exercise: using an ammeter, you measure a current of 1.0mA through a 4.7k ohms resistor. What voltage must exist across the resistor? How much power does the resistor dissipate?
+Solution 
+I= 1mA= 1* 10^-3A,     R=4.7k= 4.7*10^3 ohms
+Using Ohms law, V=IR
+V=(1*10^-3) *(4.7*10^3)
+V=4.7V
+Using ohms power law
+P=I^2 *R
+P= (1*10^-3)^2 *(4.7*10^3)
+P =4.7*10^-3W   =4.7mW
+
+
+Like we mentioned before, there are different type of resistor with different design but for this course i will just talk about the fix resistors, popular on many electronic circuit --/\/\/\/\-- has a fixed value, power rating valve, tolerance etc.. which when exceeded would fry the resistor, you can read to know the value of the resistor through some colour band found on the resistor body. The next type is the variable resistors, their values can be adjusted or changed manually. There is also fuse Resistor which act like a fuse in the circuit because it cut off when the power rating is exceeded. Photoresistors etc..
+
+
+COLOUR	SIGNIFICANT FIGURE	SIGNIFICANT FIGURE	SIGNIFICANT FIGURE	MULTIPLIER	TOLERANCE	TEMP 
+COEFF
+BLACK	0	0	0	X1		250(U)
+BROWN	1	1	1	X10	1(F)	100(S)
+RED	2	2	2	X100	2(G)	50(R)
+ORANGE	3	3	3	X1K		15(P)
+YELLOW	4	4	4	X10K		25(Q)
+GREEN	5	5	5	X100K	0.5(D)	20(Z)
+BLUE	6	6	6	X1M	0.25(C)	10
+VIOLET	7	7	7	X10M	0.1(B)	5(M)
+GREY	8	8	8	X100M	0.05(A)	1(k)
+WHITE	9	9	9	X1G		
+GOLD				X0.1	5(J)	
+SILVER				X0.01	10(K)	
+NONE250					(20M)	
+
+  In a fixed resistors, you will find some set of band together then another set separated by space from the first set. For a five band resistors, the first to third colour cluster are the significant figure, the next is the multiplier whiles the other colour at the separate end is the tolerance and if there is another band, the tells the Temperature coefficient. 
+  Resistors are so important depending on their nature of arrangement. They can be arrange in series, parallel or even series-parallel. This arrange tell what happen to the voltage and current in the circuit, if you want to lower the resistance of  resistor, it is best to combine it with another resistor in parallel arrange me using the formula;
+1/R = 1/R1 +1/R2....1/Rn
+ But in series;
+R= R1 + R2....Rn 
+In series, the voltage drop across each resistor respectively. Resistors can be use as a voltage divider for a circuit i.e we have a dc supply of 9-12v but only want 5v to our fan(load), resistor is used.
+Using the voltage divider formula
+Vo=Vin(R2/(R2+R1))     
+Vo is the output voltage, Vin is the input voltage, R1 is our resistors while R2 is the load Resistor
+R2/(R1+R2)= Is the again of the divider.
+We can calculate efficiency of the system by E=Power out/power input
+E= Vout/Vin.
+
+
+
+
+CAPACITORS
+This is created when two oppositely charged parallel plate separated by a small distance apart by an insulator material such as dielectric or air. When a battery is applied across the plates, electron from the negative  side of the battery jump out and collect on the lower plate, while the electrons are drawn away from the upper plate into the positive terminal of the battery. The upper plate become deficient in electron while the lower plate becomes abundant in electrons. Accompanying the charges is a resultant electric field between the plates and voltage equal to the battery voltage. when battery source is removed, the electric field and corresponding voltage remain. In reality the capacitors will lose it stored charge in matter of seconds to several hours once the voltage source is removed because of the imperfect insulating nature or dielectric that is placed between the plate. This is refer to as leakage current. 
+     Capacitor is measured in farad(F) with the symbol -| |-
+C = Q/V, Q= charge, V= voltage and C is the capacitance of the capacitor
+Example: 5v are applied across a 1000 microF capacitor until the capacitor is fully charged. How much charge exist on the positive and negative plates?
+Solution 
+V=5v,   C=1000x10^-6, Q= quantity of charge
+Q=c*v
+Q= 5 x (1000*10^-6)= 5x10^-3C
+
+     To easily discharge a capacitor, connect the positive side of the plate to the negative side and the capacitor will lose all charges stored in seconds. A capacitor's opposition to AC depends on frequency, and its voltage cannot change instantaneously in the ideal model.
+   
+  RC time constant
+    Like earlier said, when a charged capacitor that is shorted with a wire will discharge almost instantaneously, however, with some resistance added, the rate of the discharge will follow an exponential pattern. When the resistor is in series with the capacitor
+I=Vs(e^(-t/RC))/R                   Vr=I*R =Vs(e(-t/RC))
+Vc= 1/C(integeration;I*dt)       t/RC = -In(I*R/Vs)
+t/RC = -IN(Vr/Vs)                          t/RC=-In((Vs-Vc)/Vs)
+t/RC  refer to as the time constant
+
+just like a voltage divider but replacing the load resistor with the capacitor
+Vout= Vin(1-e^-t/RC)
+
+Capacitors can be arrange in parallel or in series. When capacitors are arrange in parallel;
+C= C1+C2 +C3.......Cn
+Just like when resistors are arrange in series.
+When capacitors are arrange in series
+1/C =1/C1+ 1/C2 +1/C3.........1/Cn
+Similar to when resistors are arrange in parallel
+
+INDUCTORS
+This are device design to take advantage of the effect of electromagnetic induction/cause. Circular radiating magnetic field can be generated when a current flows through wire anytime, increasing or decreasing a current flow will relatively increase or decrease the magnetic field strength.  Just like capacitor that stores voltage or electric energy in the form of electric field, electric field can also be stored in a magnetic field. Theoretically, any device capable od generating a magnetic field has inductance. A device that has inductance is referred to as an inductor.
+Electromagnetism
+According to the law of electromagnetism, the field of a charge at rest can be represented by a uniform, radial distribution of electric field lines or lines of force.  For a moving charge at a constant velocity, the field lines are still radial and straight but they are no longer uniformly distributed. At the same time, the electron generates a circular magnetic field. If the charge accelerates, things get a bit more complex and a ‘kink’ is created in the electromagnetic field, giving rise to an electromagnetic wave that radiates outs.
+
+The simple way to generate a magnetic field is to pass a current through a conductor. Inductors are device used to resist change in current. Symbol for inductor is -mmm—(not exactly like this).  It is measured in Henry , H. When the applied voltage increases, it acts like a time-dependent resistor whose resistance is greatest during time of rapid increase in current. On the other hand, when the applied voltage decreases, the inductor act like a time- dependent voltage source attempting to keep current flowing.
+    Inductors also stores energy just like capacitor but in it magnetic field and later returns it to the circuit when the magnetic field collapses.
+RL circuit: when resistor is placed in series with an inductor; the resistor control the rate to which energy is pumped into the magnetic field of the inductor. You can derive the expressions for the energizing response of an RL circuit by applying kirchhoff’s law, summing the voltage around the close loop.
+I =V(1-e^(-t/L/R)/R
+Vl=L(dI/dt) =VsE^(-t/L/R)
+t/L/R =-IN(Vl/Vs)
+t = L/R ------- TIME CONSTANT
+
+Inductor can be arranged in series, parallel or combination of both. In series;
+L =L1+ L2 + L3........Ln
+ While in parallel;
+1/L = 1/L1 +1/L2 +1/L3.......1/Ln
+
+
+DIODES
+This is a two lead semiconductor that act like a one-way gate to electric current flow. They are device formed from the sandwiching of two semiconductors i.e the N-type semiconductors and the p-type semiconductors. The cathode normally contain the N-type while the anode contain the P-type. If the anode is made more positive than the cathode when a voltage supply is connected, current will flow in the forward direction; this is know as a forward bias. And when the anode is made more negative than the cathode, the resulting arrangement is called a reverse bias, current would not flow because the diode act to block the current.
+     The P-type semiconductor carries a hole in it structure while the N-type semiconductor carries electron in it structure because the are having extra electron due the covalent bonding of silicon and phosphorus. The one-way gate is made possible because of the interaction between the charge carrying side, when a voltage is applied across it, the electrons will get attracted by the holes therefore causing current to follow in one direction. Both the N-type semiconductors and the P-type semiconductors conduct electricity; one does it with electron while the other does it with holes. When a diode is connected to a voltage source; the positive side of the battery connected to the anode while the negative side of the battery to the cathode(N-type side), current flows through the battery forcing the holes to pull the electrons towards the centre of the diode. The electron and holes combines allowing current to pass through the diode – this is know as a forward bias.
+        A diode one-way gate does not work all the time because it requires certain minimal amount of voltage current to follow through the diode. For silicon diode, the applied voltage would be 0.6v or greater while for germanium it is 0.2v.
+
+  You can easily tell which side is the anode or cathode by looking the direction of the arrow or but looking at the distance of the colour band,  the arrow is pointing towards the right --- from the anode to the cathode. But for a physical diodes, the side closer to the black band is the cathode.
+        There are several type of diode with different purpose and design.
+1.	Rectifier diode: these are diode for high power application eg; switches, power supply  which draw a lot of current or rectifier high voltage. They are design to have high speed but low internal capacitance, they have fewer time delay because they reduces RC time constant.
+2.	Signal diode; Germanium diodes are used mostly in RF signal detection and low-level logic design due
+              to their small threshold voltage of about 0.2 V. You do not see them in high-current       
+              rectifying applications, since they are weaker and leak more than silicon diodes when          
+                temperatures rise.
+3.	Switch diode; Silicon P and N diode
+4.	schottky
+
+
+
+When selecting a diode, there are some criteria to put in mind
+1.	Peak inverse voltage
+2.	Forward current handling capacity
+3.	Maximum forward voltage drop
+4.	Response speed time
+5.	Reverse leakage current.
+
+ZENER DIODE; This act like a two-way gate to the flow of current. In the forward direction, it is easy to push open; only 0.6v—just like a standard diode. In the reverse direction, it harder to push open it requires a voltage equal to the Zener breakdown voltage Vz. It can act like a voltage regulators, preventing any supply voltage or load current variation from pulling down the voltage supplied to the load.
+
+LIGHT EMMITING DIODES; this is a one-way gate semiconductors that allow current to travel in one direction.  It emit a near constant wave length of light when a forward bias of 1.7v depending on the light spectrum. The light it could emit comes in different colour wavelength so their forward voltage varies, different sizes and power rating.
+
+
+
+
+
+
+
+
+
+	
+TRANSISTORS:
+These are semiconductor device that can electrically control switches or amplify control. Transistors are used in almost every electrical circuit you can imagine. For example, in switches circuit, amplifiers circuit, oscillator circuit, current-source circuit, power circuit, digital logic integrated circuit, voltage regulator circuit and also any circuit that use small control signal.
+     They come in various design and unique control and current-flow features. Most comes with a variable current-control features. Some transistors are normally OFF until a voltage is applied to the base or gate where as other are normally ON until voltage is applied to the base or gate. Some transistor require small voltage and small current applied to their control lead where as other require just voltage.
+     Their are two major families of transistors; Bipolar transistors and the field effect transistors(FETs). The major difference is that bipolar transistor requires a biasing input(or output) current at their control leads, where as FETs requires only a voltage----practically  no current. Because of the nature of FETs, they draw little to no current and so they have high impedance. FETs are more popular that bipolar in circuit today. Aside drawing little current, they are cheap to manufacture (doesn’t need much silicon) and they can be extremely small.
+     Bipolar transistors are three terminal device that act like an electrical control switch or an amplifier. They are used in either NPN or PNP configuration. The NPN uses small current  and positive voltage at the base to control larger collector—emitter current. Conversely, the PNP uses small output current and negative voltage to control large emitter-collector current. The fundament formula to determine the behaviour of bipolar; Ic =H*Ib =B*Ib
+Ie= Ic+Ib,   Where; Ie is the emitter current, Ic is the collector current and Ib is the base current. B(H) is the current gain. 
+For most cases Ie=Ic 
+Vbe= Vb-Ve= +0.6v(npn)
+Vbe=Vb-Ve=-0.6n(pnp)
+
+
+RELAY
+These are electrical actuated switches. The basic kinds of relays are mechanical relays, reed relays, and solid-state relays. For a typical mechanical relays, a current sent through a coil magnet act to pull a flexible, spring—loaded conductive plate from one switch contact to another. Reed relays consist of a pair of reeds (thin, flexible metal strips) that spring together whenever a current is sent through an encapsulating wire coil. Solid-state relay is a device that can be used to switch states by applying external voltage across N-type and P-type semiconductive junction. Some limitation of solid-state and reed relay include; limited switching arrangement and tendency to become damaged by surge in power. Overall, the solid-state and the reed relays are the fastest (0.2ms-10s).
+     To make a relay change states, the voltage across the leads of its magnetic coil should be at least withing + or – 25 percent of the relay’s specified controlled voltage rating. Too much voltage may damage the magnetic coil, whereas to little may cause the relay to act erratically( flipping between back and front).
+     The coil of a relay act like an inductor. Inductors do not like sudden changes in current, if the current through the coil is suddenly interrupted by let say, a switch is opened, the coil will respond by producing  a large surge of voltage across its leads, thereby causing a large surge of current through it. The trick in getting rid of spikes is to use what are called Transient suppressors. Diodes can be placed in reverse bias across a relay’s coil to eliminate voltage spikes by going into conduction before a large voltage can be form. When it comes to dealing with an AC-actuated relays, using a diode to eliminate voltage spike will not work—the diode will conduct on alternate half cycles. Instead a RC series network is placed across the coil can be used. The capacitor absorb excessive charge and the resistor help control the discharge.
+
+DATA SHEET
+USING A  TRANSISTOR AS A CASE STUDY
+A transistor with part number (N24360) labelled on it body, costed $2.55
+ You can know more details about the transistor by searching the part number online or download the pdf from the manufacturer.
+e.g https://www.alldatasheet.com/datasheet-pdf/view/459217/NJSEMI/2N4360.html
+type of transistor: NPN
+Pin configuration: pin1-source, pin2- drain and pin3- gate
+Maximum collector/drain current: 30mA
+Maximum voltage: -20v
+Power rating : 0.5w at 25 degree Celsius case temperature  and 0.3w at 65 degree Celsius case temperature
+Operating temperature: 125 degree Celsius
+Important electrical characteristics: low noise voltage  0.8v , resistance of 350 ohms
+Capacitance =20pF
