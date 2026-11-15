@@ -1,0 +1,59 @@
+# Week 4 Notes — Electronics and Amplifiers
+
+## 1. Capacitors
+A capacitor stores energy in an electric field.
+
+- Charge: Q = CV
+- Stored energy: E = 1/2 CV²
+- Current-voltage relationship: I = C(dV/dt)
+- RC time constant: τ = RC
+
+During DC charging, current is initially highest and decreases as capacitor voltage approaches the supply. An ideal capacitor at steady-state DC behaves as an open circuit. Its voltage cannot change instantaneously.
+
+| Time | Charging level | Discharging level |
+|---|---:|---:|
+| 1τ | 63.2% | 36.8% |
+| 2τ | 86.5% | 13.5% |
+| 3τ | 95.0% | 5.0% |
+| 4τ | 98.2% | 1.8% |
+| 5τ | 99.3% | 0.7% |
+
+Practical capacitor checks: polarity, voltage rating, tolerance, leakage, ESR, ripple-current rating and temperature rating. Select voltage rating with margin above maximum operating voltage, including ripple and transients.
+
+## 2. Diodes and LEDs
+A diode conducts strongly when forward-biased and blocks current when reverse-biased, subject to leakage and reverse-breakdown limits. A silicon diode often has a forward drop around 0.6–0.7 V, depending on current and temperature.
+
+An LED needs current limiting. A first-order resistor estimate is R = (Vs − Vf)/I. Use the LED datasheet or actual simulated operating point because the model's Vf may differ from an assumed value.
+
+## 3. Bipolar Junction Transistor
+For a BJT: IE = IC + IB. In forward-active operation, IC is approximately βIB. This relationship is not a universal current guarantee. In saturation, the external load and supply determine collector current.
+
+- Cutoff: transistor off; collector current approximately zero.
+- Forward-active: transistor can amplify.
+- Saturation: transistor strongly on; collector-emitter voltage is low.
+
+### NPN low-side switch
+Connect the load between the positive supply and collector; connect emitter to circuit ground; drive the base through a resistor. A high control signal turns the transistor on, and a low signal turns it off. Use the circuit's 0 V reference as ground; do not confuse circuit ground with protective earth.
+
+## 4. Common-emitter amplifier
+A common-emitter stage uses the emitter as the common signal reference. A change in base-emitter drive changes collector current; the collector resistor converts that change into an output-voltage change.
+
+VC = VCC − IC RC
+
+As IC increases, the drop across RC increases and VC decreases. The output is inverted relative to the input (approximately 180° in the midband). The DC operating point (Q-point) should permit signal swing without early cutoff or saturation.
+
+### Approximate divider bias
+VB ≈ VCC × R2/(R1 + R2)
+VE ≈ VB − VBE
+IE ≈ VE/RE; IC ≈ IE
+VC = VCC − IC RC
+VCE = VC − VE
+
+These are approximations; a more accurate design accounts for base current and divider loading.
+
+## 5. Gain and frequency
+Voltage-gain magnitude is |Av| = |Vout/Vin|, using the same amplitude convention for both signals. For an inverting common-emitter stage, signed gain is negative when phase inversion is confirmed.
+
+Capacitive reactance is XC = 1/(2πfC). Increasing frequency decreases reactance for a fixed capacitor. Coupling and bypass capacitors affect low-frequency response. A few transient tests do not establish cutoff frequencies.
+
+The -3 dB voltage-gain level is approximately 0.707 times midband gain.
